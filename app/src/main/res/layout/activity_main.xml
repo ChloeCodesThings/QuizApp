@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,27 +20,16 @@
             android:src="@drawable/chorus_line" />
 
         <TextView
+            android:id="@+id/BroadwayTriviaText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/BroadwayTriviaText"
+            android:fontFamily="sans-serif"
             android:gravity="center"
             android:text="Broadway Trivia!"
             android:textColor="#ffff00"
             android:textSize="40sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif"
-            />
+            android:textStyle="bold" />
 
-        <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@id/BroadwayTriviaText"-->
-            <!--android:background="#000000"-->
-            <!--android:gravity="center"-->
-            <!--android:textColor="#ffffff"-->
-            <!--android:textSize="30sp"-->
-            <!--android:id="@+id/total_score_text"-->
-            <!--android:visibility="invisible" />-->
 
     </RelativeLayout>
 
@@ -50,23 +40,25 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="128dp">
 
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
             android:background="#FF0000"
             android:gravity="center"
-            android:text="Name"
+
+            android:text='What musical includes the song "Memory"?'
             android:textColor="#ffffff"
             android:textSize="15sp" />
 
         <EditText
-            android:id="@+id/name_text"
+            android:id="@+id/memory_answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:gravity="center"
-            android:hint="ex: Stephen Sondheim"
+            android:hint='Hint: "meow" '
             android:textSize="15sp" />
 
         <TextView
@@ -129,7 +121,7 @@
             android:layout_marginTop="5dp"
             android:background="#FF0000"
             android:gravity="center"
-            android:text="Which role(s) has Lin-Manuel Miranda played on Broadway?"
+            android:text="Which role(s) has Lin-Manuel Miranda NOT played on Broadway?"
             android:textColor="#ffffff"
             android:textSize="15sp" />
 
@@ -146,66 +138,36 @@
                 android:id="@+id/simba"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckboxClicked"
                 android:text="Simba" />
 
             <CheckBox
-                android:id="@+id/checkbox_sweeney"
+                android:id="@+id/sweeney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckboxClicked"
                 android:text="Sweeney Todd" />
 
             <CheckBox
                 android:id="@+id/usnavi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckboxClicked"
                 android:text="Usnavi" />
 
             <CheckBox
                 android:id="@+id/hamilton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onCheckboxClicked"
                 android:text="Hamilton" />
+
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Score Me!"
             android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:onClick="submitQuiz"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/BroadwayTriviaText"
-            android:background="#000000"
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:textSize="30sp"
-            android:id="@+id/total_score_text"
-            android:visibility="invisible" />
-
-        <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:background="#FF0000"-->
-            <!--android:gravity="center"-->
-            <!--android:text="Your Broadway Score is:"-->
-            <!--android:textColor="#ffffff" />-->
-
-        <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:gravity="center"-->
-            <!--android:text="0"-->
-            <!--android:textSize="40sp"-->
-            <!--android:textColor="#FF0000" />-->
+            android:layout_gravity="center"/>
 
 
     </LinearLayout>
