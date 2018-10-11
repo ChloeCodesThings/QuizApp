@@ -16,13 +16,22 @@ public class MainActivity extends AppCompatActivity {
 
     int correctAnswers = 0;
     Button submit;
+    CheckBox Question3Simba;
+    CheckBox Question3Ham;
+    CheckBox Question3Usnavi;
+    CheckBox Question3Sweeney;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        submit = (Button) findViewById(R.id.submitButton);
+        submit = findViewById(R.id.submitButton);
+        Question3Simba = findViewById(R.id.simba);
+        Question3Ham = findViewById(R.id.hamilton);
+        Question3Usnavi = findViewById(R.id.usnavi);
+        Question3Sweeney = findViewById(R.id.sweeney);
+
         submit.setOnClickListener(submitButtonOnClickListener);
     }
 
@@ -32,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
         return question1Answer;
     }
 
-    private void checkQuestion1 () {
+    private void checkQuestion1() {
         String question1Answer = getQuestion1Input();
-        if (question1Answer.equalsIgnoreCase("memory")) {
+        if (question1Answer.equalsIgnoreCase("cats")) {
             correctAnswers += 1;
         }
 
     }
 
-    private void checkQuestion2 () {
+    private void checkQuestion2() {
         RadioButton radioButtonMartha = (RadioButton) findViewById(R.id.radio_martha);
         boolean isMarthaChecked = radioButtonMartha.isChecked();
         if (isMarthaChecked) {
@@ -55,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         return fourLetterWord;
     }
 
-    private void checkQuestion3 () {
+    private void checkQuestion3() {
         String fourLetterWord = getQuestion3Input();
         if (fourLetterWord.equalsIgnoreCase("egot")) {
             correctAnswers += 1;
@@ -64,11 +73,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void checkQuestion4 (){
-        CheckBox Question3Simba = (CheckBox) findViewById(R.id.simba);
-        CheckBox Question3Ham = (CheckBox) findViewById(R.id.hamilton);
-        CheckBox Question3Usnavi = (CheckBox) findViewById(R.id.usnavi);
-        CheckBox Question3Sweeney = (CheckBox) findViewById(R.id.sweeney);
+    private void checkQuestion4() {
 
         boolean isSimbaChecked = Question3Simba.isChecked();
         boolean isHamiltonChecked = Question3Ham.isChecked();
@@ -89,12 +94,12 @@ public class MainActivity extends AppCompatActivity {
         checkQuestion4();
     }
 
-    private void resetCounterCorrectAnswers(){
+    private void resetCounterCorrectAnswers() {
         correctAnswers = 0;
     }
 
     final View.OnClickListener submitButtonOnClickListener = new View.OnClickListener() {
-        public void onClick(final View v){
+        public void onClick(final View v) {
             checkQuestions();
             Toast.makeText(MainActivity.this, "Correct Answers: " + correctAnswers + "/4",
                     Toast.LENGTH_LONG).show();

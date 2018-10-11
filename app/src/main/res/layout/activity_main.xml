@@ -1,177 +1,172 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
-
-        <ImageView
-            android:id="@+id/image1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitStart"
-            android:src="@drawable/chorus_line" />
-
-        <TextView
-            android:id="@+id/BroadwayTriviaText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:gravity="center"
-            android:text="Broadway Trivia!"
-            android:textColor="#ffff00"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-
-    </RelativeLayout>
-
     <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="128dp">
+        tools:context=".MainActivity"
+        android:orientation="vertical">
 
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
-            android:background="#FF0000"
-            android:gravity="center"
+            android:layout_height="wrap_content">
 
-            android:text='What musical includes the song "Memory"?'
-            android:textColor="#ffffff"
-            android:textSize="15sp" />
 
-        <EditText
-            android:id="@+id/memory_answer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:hint='Hint: "meow" '
-            android:textSize="15sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="#FF0000"
-            android:gravity="center"
-            android:text="Which of the following is NOT a sister in Hamilton?"
-            android:textColor="#ffffff"
-            android:textSize="15sp" />
-
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/hamilton_radio"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/radio_angelica"
+            <ImageView
+                android:id="@+id/image1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Angelica" />
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitStart"
+                android:src="@drawable/chorus_line" />
 
-            <RadioButton
-                android:id="@+id/radio_eliza"
+            <TextView
+                android:id="@+id/BroadwayTriviaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Broadway Trivia!"
+                android:textColor="#ffff00"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF0000"
+                android:gravity="center"
+
+                android:text='What musical includes the song "Memory"?'
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/memory_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:hint='Hint: "meow" '
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#FF0000"
+                android:gravity="center"
+                android:text="Which of the following is NOT a sister in Hamilton?"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/hamilton_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_angelica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Angelica" />
+
+                <RadioButton
+                    android:id="@+id/radio_eliza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eliza" />
+
+                <RadioButton
+                    android:id="@+id/radio_martha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Martha" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#FF0000"
+                android:gravity="center"
+                android:text="Robert Lopez is the 1st double ____ winner."
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/lopez_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Hint: it's 4 letters!"
+                android:inputType="textCapCharacters" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#FF0000"
+                android:gravity="center"
+                android:text="Which role(s) has Lin-Manuel Miranda NOT played on Broadway?"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/simba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Simba" />
+
+                <CheckBox
+                    android:id="@+id/sweeney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sweeney Todd" />
+
+                <CheckBox
+                    android:id="@+id/usnavi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Usnavi" />
+
+                <CheckBox
+                    android:id="@+id/hamilton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hamilton" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submitButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eliza" />
-
-            <RadioButton
-                android:id="@+id/radio_martha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Martha" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="#FF0000"
-            android:gravity="center"
-            android:text="Robert Lopez is the 1st double ____ winner."
-            android:textColor="#ffffff"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/lopez_answer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:inputType="textCapCharacters"
-            android:hint="Hint: it's 4 letters!" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="#FF0000"
-            android:gravity="center"
-            android:text="Which role(s) has Lin-Manuel Miranda NOT played on Broadway?"
-            android:textColor="#ffffff"
-            android:textSize="15sp" />
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            >
-
-            <CheckBox
-                android:id="@+id/simba"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Simba" />
-
-            <CheckBox
-                android:id="@+id/sweeney"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sweeney Todd" />
-
-            <CheckBox
-                android:id="@+id/usnavi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Usnavi" />
-
-            <CheckBox
-                android:id="@+id/hamilton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hamilton" />
-
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Score Me!"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Score Me!" />
 
 
     </LinearLayout>
 
-
-
-</android.support.constraint.ConstraintLayout>
+</ScrollView>
